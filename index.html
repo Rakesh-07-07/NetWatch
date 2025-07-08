@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Net Watch</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Port Scanner</h1>
+            <button id="mode-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+        </header>
+        <main>
+            <form id="scan-form">
+                <label for="ip">IP Address or Hostname:</label>
+                <input type="text" id="ip" name="ip" placeholder="e.g. 192.168.1.1" required />
+                
+                <label for="start-port">Start Port:</label>
+                <input type="number" id="start-port" name="start-port" min="1" max="65535" value="1" required />
+                
+                <label for="end-port">End Port:</label>
+                <input type="number" id="end-port" name="end-port" min="1" max="65535" value="1024" required />
+                
+                <button type="submit">Scan</button>
+            </form>
+            <section id="results" aria-live="polite" aria-atomic="true"></section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
